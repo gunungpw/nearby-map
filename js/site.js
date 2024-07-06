@@ -11,7 +11,7 @@ var radarLayer, infraredLayer, contourNumbersLayer, contourLayer;
 var searchInput, locateMeButton, resultsPanel, searchInputLength, radarButton, infraredButton, contoursButton, clearButton;
 
 // Default location: Tower of London
-var userPosition = [-0.076083, 51.508120];
+var userPosition = [-6.17545, 106.82719];
 var userPositionUpdated = false;
 var layerStyle = 'road';
 var centerMapOnResults = false;
@@ -33,20 +33,20 @@ function GetMap() {
 
         // Add authentication details for connecting to Azure Maps.
         authOptions: {
-            // Use Azure Active Directory authentication.
-            authType: 'anonymous',
-            // Your Azure Maps client id for accessing your Azure Maps account.
-            clientId: 'e6b6ab59-eb5d-4d25-aa57-581135b927f0',
-            getToken: function (resolve, reject, map) {
-                // URL to your authentication service that retrieves an Azure Active Directory Token.
-                var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
-                fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
-            }
+            // // Use Azure Active Directory authentication.
+            // authType: 'anonymous',
+            // // Your Azure Maps client id for accessing your Azure Maps account.
+            // clientId: 'e6b6ab59-eb5d-4d25-aa57-581135b927f0',
+            // getToken: function (resolve, reject, map) {
+            //     // URL to your authentication service that retrieves an Azure Active Directory Token.
+            //     var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
+            //     fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+            // }
 
             // Alternatively, use an Azure Maps key. Get an Azure Maps key at https://azure.com/maps.
             // NOTE: The primary key should be used as the key.
-            //authType: 'subscriptionKey',
-            //subscriptionKey: '[YOUR_AZURE_MAPS_KEY]'
+            authType: 'subscriptionKey',
+            subscriptionKey: '4tLchRhGmGFYDVoAoXgOfpo5wesOJunWWmQXDrQwZkSshpAh8yFYJQQJ99AGACYeBjFuftysAAAgAZMPI7mZ'
         }
     });
 
@@ -363,7 +363,7 @@ function search() {
 }
 
 function itemClicked(id) {
-    
+
     var shape = datasource.getShapeById(id);
     var coordinates = shape.getCoordinates();
 
