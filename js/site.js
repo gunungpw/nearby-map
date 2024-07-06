@@ -27,7 +27,7 @@ function GetMap() {
     // Initialize a map instance.
     map = new atlas.Map('demoMap', {
         center: userPosition,
-        zoom: 16,
+        zoom: 13,
         view: 'Auto',
         style: layerStyle,
 
@@ -360,7 +360,7 @@ function itemClicked(id) {
     //Center the map over the clicked item from the result list.
     map.setCamera({
         center: coordinates,
-        zoom: 16
+        zoom: 15
     });
 
     showPopupPOI(shape);
