@@ -11,7 +11,7 @@ var radarLayer, infraredLayer, contourNumbersLayer, contourLayer;
 var searchInput, locateMeButton, resultsPanel, searchInputLength, radarButton, infraredButton, contoursButton, clearButton;
 
 // Default location: Tower of London
-var userPosition = [-6.17545, 106.82719];
+var userPosition = [106.8271528, -6.1753924];
 var userPositionUpdated = false;
 var layerStyle = 'road';
 var centerMapOnResults = false;
@@ -33,16 +33,6 @@ function GetMap() {
 
         // Add authentication details for connecting to Azure Maps.
         authOptions: {
-            // // Use Azure Active Directory authentication.
-            // authType: 'anonymous',
-            // // Your Azure Maps client id for accessing your Azure Maps account.
-            // clientId: 'e6b6ab59-eb5d-4d25-aa57-581135b927f0',
-            // getToken: function (resolve, reject, map) {
-            //     // URL to your authentication service that retrieves an Azure Active Directory Token.
-            //     var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
-            //     fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
-            // }
-
             // Alternatively, use an Azure Maps key. Get an Azure Maps key at https://azure.com/maps.
             // NOTE: The primary key should be used as the key.
             authType: 'subscriptionKey',
