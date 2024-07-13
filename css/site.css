@@ -8,6 +8,14 @@
     overflow: hidden;
 }
 
+#clearmap-button {
+    height: fit-content;
+}
+
+#locate-me-button {
+    height: fit-content;
+}
+
 #results-panel {
     width: 500px;
     margin: 0;
