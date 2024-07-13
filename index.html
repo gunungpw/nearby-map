@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Azure Location Based Services, Azure Maps Demo site.">
+    <meta name="description" content="Azure Location Based Services.">
     <meta name="author" content="Microsoft Azure Maps">
 
     <title>Senyummu Maps</title>
 
     <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.css" rel="stylesheet">
     <link href="https://atlas.microsoft.com/sdk/javascript/drawing/1/atlas-drawing.min.css" rel="stylesheet">
-    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="css/site.css" rel="stylesheet">
 
     <link href="favicon.ico" rel="shortcut icon">
@@ -92,7 +92,33 @@
                 d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
         </symbol>
     </svg>
-
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark d-flex bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/" title="Senyummu Nearby Hospital">
+                    <svg width="20" height="20" class="me-2 mb-1" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M32.2448 35.7947C23.525 42.5775 10.9868 40.9815 4.20483 32.2608C-2.57719 23.5401 -0.981434 11.0005 7.7383 4.21768C7.7953 4.16068 7.85228 4.10369 7.96627 4.04669C16.743 -2.6221 29.2812 -0.855162 35.9492 7.92256C42.5603 16.7003 40.9075 29.0689 32.2448 35.7947Z"
+                            fill="url(#paint0_linear)" />
+                        <path d="M23.183 5.35754L8.30811 29.0118L26.9444 21.773L23.183 5.35754Z" fill="#9CEBFF" />
+                        <path opacity="0.7" d="M20.1626 10.1454L29.3953 32.5457L23.1832 5.35754L20.1626 10.1454Z"
+                            fill="white" />
+                        <path d="M19.6494 24.623L25.2346 22.457L29.395 32.6027L19.6494 24.623Z" fill="#32BEDD" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="20.1249" y1="40.1385" x2="20.1249" y2="0.196089"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0.0" stop-color="#198AB3" />
+                                <stop offset="0.4417" stop-color="#28B7DB" />
+                                <stop offset="0.7753" stop-color="#32D4F5" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    Nearby Hospital
+                </a>
+            </div>
+        </nav>
+    </header>
     <main class="flex-fill">
 
         <div id="demoMap" class="container-fluid p-0 m-0 w-100 h-100" tabindex="200" role="application">
@@ -109,14 +135,14 @@
                         <span id="locate-me-spinner" class="spinner-grow spinner-grow-sm" style="display:none"
                             role="status" aria-hidden="true"></span>
                     </button>
-                    <button title="Weather Radar" id="radar-button" type="button" data-bs-toggle="button"
-                        class="btn btn-outline-secondary">
+                    <button title="Weather Radar" style="display: none;" id="radar-button" type="button"
+                        data-bs-toggle="button" class="btn btn-outline-secondary">
                         <svg width="1.0em" height="1.0em">
                             <use xlink:href="#cloud-icon" />
                         </svg>
                     </button>
-                    <button title="Weather Infrared" id="infrared-button" type="button" data-bs-toggle="button"
-                        class="btn btn-outline-secondary">
+                    <button title="Weather Infrared" style="display: none;" id="infrared-button" type="button"
+                        data-bs-toggle="button" class="btn btn-outline-secondary">
                         <svg width="1.0em" height="1.0em">
                             <use xlink:href="#thermometer-icon" />
                         </svg>
@@ -126,19 +152,22 @@
                             <use xlink:href="#trash-icon" />
                         </svg>
                     </button>
+                    <label for="search-input" style="display: none;" class="form-label">Search for Nearby
+                        Hospital</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="flex-shrink-0" width="1.0em" height="1.0em">
+                                <use xlink:href="#search-icon" />
+                            </svg>
+                        </span>
+                        <input id="search-input" type="search" tabindex="100" class="form-control"
+                            placeholder="like hospital or clinic...">
+                    </div>
+
                 </div>
-                <label for="search-input" class="form-label">Search for Nearby Hospital</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">
-                        <svg class="flex-shrink-0" width="1.0em" height="1.0em">
-                            <use xlink:href="#search-icon" />
-                        </svg>
-                    </span>
-                    <input id="search-input" type="search" tabindex="100" class="form-control"
-                        placeholder="like hopital or clinic...">
-                </div>
-                <label for="search-country" class="form-label">Filter the results for the country</label>
-                <div class="input-group mb-3">
+                <label for="search-country" style="display: none;" class="form-label">Filter the results for the
+                    country</label>
+                <div style="display: none;" class="input-group mb-3">
                     <select id="search-country" tabindex="101" class="form-select"
                         aria-label="Filter the results for the country">
                         <option value="AF">Afghanistan</option>
