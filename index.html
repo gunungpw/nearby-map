@@ -127,43 +127,41 @@
 
         <div id="search">
             <div class="card-body m-3">
-                <div class="d-flex gap-2 w-100 mb-3 justify-content-between border-bottom">
-                    <button title="Locate Me" id="locate-me-button" type="button" class="btn btn-outline-secondary">
-                        <svg id="locate-me-icon" width="1.0em" height="1.0em">
-                            <use xlink:href="#bullseye-icon" />
-                        </svg>
-                        <span id="locate-me-spinner" class="spinner-grow spinner-grow-sm" style="display:none"
-                            role="status" aria-hidden="true"></span>
-                    </button>
-                    <button title="Weather Radar" style="display: none;" id="radar-button" type="button"
-                        data-bs-toggle="button" class="btn btn-outline-secondary">
-                        <svg width="1.0em" height="1.0em">
-                            <use xlink:href="#cloud-icon" />
-                        </svg>
-                    </button>
-                    <button title="Weather Infrared" style="display: none;" id="infrared-button" type="button"
-                        data-bs-toggle="button" class="btn btn-outline-secondary">
-                        <svg width="1.0em" height="1.0em">
-                            <use xlink:href="#thermometer-icon" />
-                        </svg>
-                    </button>
-                    <button title="Clear the map" id="clearmap-button" type="button" class="btn btn-outline-danger">
-                        <svg width="1.0em" height="1.0em">
-                            <use xlink:href="#trash-icon" />
-                        </svg>
-                    </button>
-                    <label for="search-input" style="display: none;" class="form-label">Search for Nearby
-                        Hospital</label>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">
-                            <svg class="flex-shrink-0" width="1.0em" height="1.0em">
-                                <use xlink:href="#search-icon" />
+                <div class="d-flex gap-2 w-100 mb-3 pb-3 justify-content-between border-bottom">
+                    <div class="button-group d-flex gap-2">
+                        <button title="Locate Me" id="locate-me-button" type="button" class="btn btn-outline-secondary">
+                            <svg id="locate-me-icon" width="1.0em" height="1.0em">
+                                <use xlink:href="#bullseye-icon" />
                             </svg>
-                        </span>
-                        <input id="search-input" type="search" tabindex="100" class="form-control"
-                            placeholder="like hospital or clinic...">
+                            <span id="locate-me-spinner" class="spinner-grow spinner-grow-sm" style="display:none" role="status" aria-hidden="true"></span>
+                        </button>
+                        <button title="Weather Radar" style="display: none;" id="radar-button" type="button" data-bs-toggle="button" class="btn btn-outline-secondary">
+                            <svg width="1.0em" height="1.0em">
+                                <use xlink:href="#cloud-icon" />
+                            </svg>
+                        </button>
+                        <button title="Weather Infrared" style="display: none;" id="infrared-button" type="button" data-bs-toggle="button" class="btn btn-outline-secondary">
+                            <svg width="1.0em" height="1.0em">
+                                <use xlink:href="#thermometer-icon" />
+                            </svg>
+                        </button>
+                        <button title="Clear the map" id="clearmap-button" type="button" class="btn btn-outline-danger">
+                            <svg width="1.0em" height="1.0em">
+                                <use xlink:href="#trash-icon" />
+                            </svg>
+                        </button>
                     </div>
-
+                    <div class="search-group flex-grow-1">
+                        <label for="search-input" style="display: none;" class="form-label">Search for Nearby Hospital</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg class="flex-shrink-0" width="1.0em" height="1.0em">
+                                    <use xlink:href="#search-icon" />
+                                </svg>
+                            </span>
+                            <input id="search-input" type="search" tabindex="100" class="form-control" placeholder="like hospital or clinic...">
+                        </div>
+                    </div>
                 </div>
                 <label for="search-country" style="display: none;" class="form-label">Filter the results for the
                     country</label>
