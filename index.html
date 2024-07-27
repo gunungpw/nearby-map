@@ -18,7 +18,6 @@
 </head>
 
 <body onload="GetMap()" class="d-flex flex-column h-100">
-    <!-- Icons from https://icons.getbootstrap.com/ -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="search-icon" viewBox="0 0 16 16" fill="currentColor">
             <path
@@ -96,23 +95,13 @@
         <nav class="navbar navbar-expand-md navbar-dark d-flex bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/" title="Senyummu Nearby Hospital">
-                    <svg width="20" height="20" class="me-2 mb-1" viewBox="0 0 40 40" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg class="pb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-map">
                         <path
-                            d="M32.2448 35.7947C23.525 42.5775 10.9868 40.9815 4.20483 32.2608C-2.57719 23.5401 -0.981434 11.0005 7.7383 4.21768C7.7953 4.16068 7.85228 4.10369 7.96627 4.04669C16.743 -2.6221 29.2812 -0.855162 35.9492 7.92256C42.5603 16.7003 40.9075 29.0689 32.2448 35.7947Z"
-                            fill="url(#paint0_linear)" />
-                        <path d="M23.183 5.35754L8.30811 29.0118L26.9444 21.773L23.183 5.35754Z" fill="#9CEBFF" />
-                        <path opacity="0.7" d="M20.1626 10.1454L29.3953 32.5457L23.1832 5.35754L20.1626 10.1454Z"
-                            fill="white" />
-                        <path d="M19.6494 24.623L25.2346 22.457L29.395 32.6027L19.6494 24.623Z" fill="#32BEDD" />
-                        <defs>
-                            <linearGradient id="paint0_linear" x1="20.1249" y1="40.1385" x2="20.1249" y2="0.196089"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0.0" stop-color="#198AB3" />
-                                <stop offset="0.4417" stop-color="#28B7DB" />
-                                <stop offset="0.7753" stop-color="#32D4F5" />
-                            </linearGradient>
-                        </defs>
+                            d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" />
+                        <path d="M15 5.764v15" />
+                        <path d="M9 3.236v15" />
                     </svg>
                     Nearby Hospital
                 </a>
@@ -164,7 +153,7 @@
                                 </svg>
                             </span>
                             <input id="search-input" type="search" tabindex="100" class="form-control"
-                                placeholder="hospital or clinic...">
+                                placeholder="Search">
                         </div>
                     </div>
                 </div>
